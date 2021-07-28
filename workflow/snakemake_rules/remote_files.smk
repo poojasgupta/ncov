@@ -41,6 +41,7 @@ SCHEME_REMOTES = {
     "https": _remote_producer(lambda HTTP: HTTP.RemoteProvider().remote),
     "http": _remote_producer(lambda HTTP: partial(HTTP.RemoteProvider().remote, insecure = True)),
     "s3": _remote_producer(lambda S3: S3.RemoteProvider().remote),
+    "gs": _remote_producer(lambda GS: GS.RemoteProvider().remote),
     "": lambda: lambda local_path, **kwargs: local_path,
 }
 
