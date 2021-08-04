@@ -1,10 +1,14 @@
 {
-  "title": "Genomic epidemiology of novel coronavirus",
-  "build_url": "https://github.com/nextstrain/ncov",
+  "title": "my_build",
   "maintainers": [
-    {"name": "the Nextstrain team", "url": "https://nextstrain.org/"}
+    {"name": "test", "url": "https://github.com/poojasgupta"}
   ],
   "colorings": [
+     {
+      "key": "gt",
+      "title": "Genotype",
+      "type": "categorical"
+    },
     {
       "key": "emerging_lineage",
       "title": "Emerging Lineage",
@@ -18,6 +22,11 @@
     {
       "key": "GISAID_clade",
       "title": "GISAID Clade",
+      "type": "categorical"
+    },
+    {
+      "key": "zip",
+      "title": "Zip Code",
       "type": "categorical"
     },
     {
@@ -115,26 +124,31 @@
     }
   ],
   "geo_resolutions": [
+    "zip",
     "location",
     "division",
     "country",
     "region"
   ],
   "display_defaults": {
-    "color_by": "country",
+    "color_by": "division",
     "distance_measure": "num_date",
-    "geo_resolution": "country",
+    "geo_resolution": "location",
     "map_triplicate": true,
     "branch_label": "clade"
   },
   "filters": [
     "recency",
     "clade_membership",
+    "GISAID Clade",
     "emerging_lineage",
+    "PANGO Lineage",
     "region",
     "country",
     "division",
     "location",
+    "zip",
+    "date",
     "host",
     "author"
   ],
